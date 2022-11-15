@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Barre de nav */
+
+.sous-menu{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    top: 62px;
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    border-top: 2px solid red;
+    margin-left: -20px;
+    width: 200px;
+}
+
+nav{
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    height: 62px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: #fff;
+    display: flex;
+    user-select: none;
+}
+
+.logo{
+    padding: 0px 0px 15px 15px;
+    margin-top: -20px;
+}
+
+.menu{
+    display: flex;
+    margin: auto;
+}
+
+nav li{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 65px;
+    padding: 0 20px 0 20px;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 150px;
+}
+
+nav li:hover a{
+    color: #eb7371;
+}
+
+nav li:hover .sous-menu{
+    display: block;
+}
+
+nav li .sous-menu a {
+    margin-left: -20px;
+    width: 200px;
+    display: block;
+}
+
+nav li .sous-menu a:hover{
+    background-color: rgba(235, 115, 113, 0.3);
+    color: #fff;
+}
+
+nav .sous-menu li a{
+    color: black;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav .icone p{
+    display: inline-block;
+    line-height: 65px;
+    padding: 0 15px 0 15px;
+    font-size: 1.15em;
+}
+
+.toggle{
+    display: none;
+}
+
+nav .icone a:hover i{
+    color: #eb7371;
+}
+
+/* Fin de barre de nav */
+
+/* Header */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('img/test.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+header h1{
+    font-size: 50px;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 60px;
+    color: #fff;
+}
+
+header .police{
+    font-family: 'Playfair Display', sans-serif;
+}
+
+header .couleur{
+    color: #eb7371;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+header button{
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+}
+
+header button:hover{
+    color: #000;
+}
+
+header button::before{
+    content: '';
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50% 50% 0 0;
+    transition: all .5s;
+    z-index: -1;
+}
+
+header button:hover::before{
+    top:0;
+    border-radius: 0;
+}
+
+/* Fin du header */
+
+/* Menu image */
+.conteneur{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.element{
+    height: 550px;
+    line-height: 550px;
+    overflow: auto;
+    text-align: center;
+    margin: 5px;
+    flex: 1;
+}
+
+.element:nth-child(1){
+    background-image: url('img/1.jpg');
+    background-size: cover;
+}
+
+.element:nth-child(2){
+    background-image: url('img/2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.element:nth-child(3){
+    background-image: url('img/3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.conteneur h3{
+    color: #f2f2f2;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.conteneur .element{
+    transition: all 0.3s ease;
+}
+
+.conteneur .element:hover{
+    transform:scale(1.02);
+}
+/* Fin de menu image */
+
+/* Story telling */
+.storytelling{
+    display: flex;
+    width: 100%;
+    padding: 50px 100px;
+    overflow: auto;
+    height: 350px;
+}
+
+.storytelling p{
+    font-size: 13px;
+    color: dimgray;
+}
+
+.storytelling br{
+    content: "";
+    display: block;
+    margin-bottom: 10px;
+}
+
+.storytelling .right{
+    margin-left: 20px;
+}
+/* Fin de story telling */
+
+/* Newsletter */
+
+.newsletter{
+    flex: 1;
+    height: 250px;
+    padding-top: 90px;
+    text-align: center;
+    background-image: url('img/bannierenl.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.newsletter h3{
+    color: #f2f2f2;
+    font-size: 25px;
+    text-shadow: 1px 1px 1px #000;
+    margin-bottom: 15px;
+}
+
+.newsletter input{
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+/* Fin de newsletter*/
+
+/* Points forts */
+
+.arguments{
+    flex: 1;
+    text-align: center;
+    height: 125px;
+    padding-top: auto;
+    padding-bottom: auto;
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px solid rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.arguments h3{
+    margin-top: 35px;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.arguments p{
+    font-size: 0.8em;
+}
+
+/* Fin de points forts */
+
+/* Pied de page */
+footer{
+    margin-top: 20px;
+    border-top: 3px solid #eb7371;
+    background-color: #1a1a1a;
+    padding: 20px 100px;
+    color: #828282;
+}
+
+footer span{
+    color: #eb7371;
+}
+
+footer h5{
+    margin-bottom: 20px;
+}
+
+footer a.mail{
+    color: #828282    
+}
+
+footer .colonnes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .colonne{
+    padding: 5px;
+    width: 200px;
+    margin: auto;
+}
+
+footer .colonne_gauche{
+    flex: 1;
+    display: flex;
+    margin: auto;
+}
+
+footer .colonne_droite{
+    flex: 1;
+    display: flex;
+    margin: auto;
+}
+
+footer .colonnes p{
+    cursor: pointer;
+}
+
+footer .copyright{
+    font-family: 'Playfair Display', sans-serif;
+}
+/* Fin du pied de page */
+
+/* Responsive */
+
+@media all and (max-width: 1280px){
+    .toggle{
+        display: block;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .fa-solid.fa-bars.ouvrir{
+        display: block;
+        padding: 20px;
+        z-index: 2;
+    }
+
+    .fa-solid.fa-xmark.fermer{
+        display: none;
+        padding: 20px;
+    }
+
+    .open .fa-solid.fa-bars.ouvrir{
+        display: none;
+    }
+
+    .open .fa-solid.fa-xmark.fermer{
+        display: block;
+    }
+
+    nav{
+        justify-content: space-between;
+    }
+
+    .menu{
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+        padding: 2rem;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 1s;
+    }
+
+    .open .menu{
+        transform: translateX(0%);
+    }
+
+    .sous-menu{
+        visibility: hidden;
+    }
+
+    .menu .icone{
+        display: flex;
+        margin-top: -600px;
+        margin-left: -25px;
+        align-items: center;
+    }
+    
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .menu ul li{
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+}
+
+@media all and (max-width: 940px){
+    .conteneur{
+        flex-direction: column;
+        margin: 1px 5px 0px 5px;
+    }
+
+    .arguments{
+        height: 75px;
+    }
+
+    .arguments h3{
+        margin-top: 15px;
+        font-size: 1.6em;
+        margin-bottom: 15px;
+    }
+
+    .arguments p{
+        font-size: 0.7em;
+    }
+
+    footer{
+        padding: 20px 50px;
+    }
+
+    .colonne_gauche{
+        flex-direction: column; 
+    }
+
+    .colonne_droite{
+        flex-direction: column;
+    }
+}
+
+@media all and (max-height: 650px){
+    .menu ul{
+        margin-top: 70px;
+    }
+
+    .menu ul li{
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    .menu .icone{
+        margin-top: -430px;
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-height: 480px){
+    .menu ul li{
+        padding: 3px;
+        font-size: 0.8rem;
+    }
+
+    .menu .icone{
+        margin-top: -400px;
+        font-size: 0.8rem;
+    }
+    .storytelling{
+        width: 100%;
+        padding: 20px 40px;
+    }
+}
